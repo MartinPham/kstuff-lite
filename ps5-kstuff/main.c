@@ -23,18 +23,18 @@ int (*snprintf)(char * restrict str, size_t size, const char * restrict format, 
 
 void notify(const char* s)
 {
-    struct
-    {
-        char pad1[0x10];
-        int f1;
-        char pad2[0x19];
-        char msg[0xc03];
-    } notification = {.f1 = -1};
-    char* d = notification.msg;
-    while(*d++ = *s++);
-    int fd = open("/dev/notification0", 1);
-    write(fd, &notification, 0xc30);
-    close(fd);
+    // struct
+    // {
+    //     char pad1[0x10];
+    //     int f1;
+    //     char pad2[0x19];
+    //     char msg[0xc03];
+    // } notification = {.f1 = -1};
+    // char* d = notification.msg;
+    // while(*d++ = *s++);
+    // int fd = open("/dev/notification0", 1);
+    // write(fd, &notification, 0xc30);
+    // close(fd);
 }
 
 void die(int line)
